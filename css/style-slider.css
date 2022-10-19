@@ -7,6 +7,8 @@
   max-width: 1531px;
   width: 100%;
   padding: 40px 0;
+  left: 33%;
+  bottom: 25%;
 }
 .slide-content{
   margin: 0 40px;
@@ -118,10 +120,19 @@
 }
 
 @media screen and (max-width: 768px) {
+  .slide-container{
+    left: 0%;
+  }
   .slide-content{
     margin: 0 10px;
   }
   .swiper-navBtn{
     display: none;
+  }
+
+}
+@media all and (max-width: 991px) and (min-width: 576px){
+  .slide-container{
+    left: 15%;
   }
 }

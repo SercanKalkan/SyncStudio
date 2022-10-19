@@ -988,7 +988,8 @@ FOR MOBILES
 }
 .slider-controls{
   position: absolute;
-  right:15%;
+  right:0%;
+  left: 50%;
   bottom:10%;
   height: auto;
   width: auto;
@@ -998,9 +999,11 @@ FOR MOBILES
 .slide-text{
   font-size: 70px;
 }
-#home .social-media-links{
-display: none;
+#home .social-media-links ul li{
+padding-left: 0px; 
+padding-right: 5px;
 }
+
 .about-img{
   display: none;
 }
@@ -1088,6 +1091,10 @@ display: none;
 
   display:none;
 }
+.project .social-media-links ul li{
+padding-left: 0px;
+padding-right: 5px;
+}
 
 
 
@@ -1137,6 +1144,10 @@ FOR EXTRA SMALL DEVICES
   #home .social-media-links{
   display: none;
   }
+ .project .social-media-links ul li{
+    padding-left: 0px;
+    padding-right: 5px;
+    }
   .about-img{
     display: none;
   }
@@ -1263,6 +1274,10 @@ input{
 
   display:none;
 }
+.project .social-media-links{
+  padding-left: 0px;
+  padding-right: 5px;
+  }
 
 }
 
