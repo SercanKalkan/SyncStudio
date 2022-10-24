@@ -11,86 +11,12 @@
   
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.min.css" integrity="sha256-DBYdrj7BxKM3slMeqBVWX2otx7x4eqoHRJCsSDJ0Nxw=" crossorigin="anonymous"/>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-    <script type="text/javascript">
-      (function() {
-          // https://dashboard.emailjs.com/admin/account
-          emailjs.init('c-lTDqyEavsL9bfjc');
-      })();
-    </script>
-    <script type="text/javascript">
-      window.onload = function() {
-          document.getElementById('myForm').addEventListener('submit', function(event) {
-              event.preventDefault();
-              emailjs.sendForm('service_2f28uqb', 'template_k08gwom', '#myForm')
-                .then(function(response) {
-                  window.alert('E-posta Gönderildi!', response.status, response.text);
-                }, function(error) {
-                  windows.alert('Başarısız...', error);
-              });
-          });
-      }
-      var ALERT_TITLE = "Sync Studio";
-var ALERT_BUTTON_TEXT = "Tamam";
-
-if (document.getElementById) {
-  window.alert = function(txt) {
-    createCustomAlert(txt);
-  }
-}
-
-function createCustomAlert(txt) {
-  d = document;
-
-  if (d.getElementById("modalContainer")) return;
-
-  mObj = d.getElementsByTagName("body")[0].appendChild(d.createElement("div"));
-  mObj.id = "modalContainer";
-  mObj.style.height = d.documentElement.scrollHeight + "px";
-
-  alertObj = mObj.appendChild(d.createElement("div"));
-  alertObj.id = "alertBox";
-  if (d.all && !window.opera) alertObj.style.top = document.documentElement.scrollTop + "px";
-  alertObj.style.left = (d.documentElement.scrollWidth - alertObj.offsetWidth) / 2 + "px";
-  alertObj.style.visiblity = "visible";
-
-  h1 = alertObj.appendChild(d.createElement("h1"));
-  h1.appendChild(d.createTextNode(ALERT_TITLE));
-
-  msg = alertObj.appendChild(d.createElement("p"));
-  msg.innerHTML = txt;
-
-  btn = alertObj.appendChild(d.createElement("a"));
-  btn.id = "closeBtn";
-  btn.appendChild(d.createTextNode(ALERT_BUTTON_TEXT));
-  btn.href = "#";
-  btn.focus();
-  btn.onclick = function() {
-    removeCustomAlert();
-    return false;
-  }
-
-  alertObj.style.display = "block";
-
-}
-
-function removeCustomAlert() {
-  document.getElementsByTagName("body")[0].removeChild(document.getElementById("modalContainer"));
-}
-
-function ful() {
-  alert('Alert this pages');
-}
-    </script>
     <link rel="stylesheet" href="css/style.css" />
     <!-- <link rel="stylesheet" href="css/swiper-bundle.min.css"> -->
     <link rel="stylesheet" href="css/style-slider.css">
-    
   </head>
 
   <body>
-
     <div id="all">
   <div id="preloader">
     <div class="p">SYNC STUDIO</div>
@@ -674,7 +600,79 @@ function ful() {
 
     </div> 
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+      (function() {
+          // https://dashboard.emailjs.com/admin/account
+          emailjs.init('c-lTDqyEavsL9bfjc');
+      })();
+    </script>
+    <script type="text/javascript">
+      window.onload = function() {
+          document.getElementById('myForm').addEventListener('submit', function(event) {
+              event.preventDefault();
+              emailjs.sendForm('service_2f28uqb', 'template_k08gwom', '#myForm')
+                .then(function(response) {
+                  window.alert('E-posta Gönderildi!', response.status, response.text);
+                }, function(error) {
+                  windows.alert('Başarısız...', error);
+              });
+          });
+      }
+      var ALERT_TITLE = "Sync Studio";
+var ALERT_BUTTON_TEXT = "Tamam";
 
+if (document.getElementById) {
+  window.alert = function(txt) {
+    createCustomAlert(txt);
+  }
+}
+
+function createCustomAlert(txt) {
+  d = document;
+
+  if (d.getElementById("modalContainer")) return;
+
+  mObj = d.getElementsByTagName("body")[0].appendChild(d.createElement("div"));
+  mObj.id = "modalContainer";
+  mObj.style.height = d.documentElement.scrollHeight + "px";
+
+  alertObj = mObj.appendChild(d.createElement("div"));
+  alertObj.id = "alertBox";
+  if (d.all && !window.opera) alertObj.style.top = document.documentElement.scrollTop + "px";
+  alertObj.style.left = (d.documentElement.scrollWidth - alertObj.offsetWidth) / 2 + "px";
+  alertObj.style.visiblity = "visible";
+
+  h1 = alertObj.appendChild(d.createElement("h1"));
+  h1.appendChild(d.createTextNode(ALERT_TITLE));
+
+  msg = alertObj.appendChild(d.createElement("p"));
+  msg.innerHTML = txt;
+
+  btn = alertObj.appendChild(d.createElement("a"));
+  btn.id = "closeBtn";
+  btn.appendChild(d.createTextNode(ALERT_BUTTON_TEXT));
+  btn.href = "#";
+  btn.focus();
+  btn.onclick = function() {
+    removeCustomAlert();
+    return false;
+  }
+
+  alertObj.style.display = "block";
+
+}
+
+function removeCustomAlert() {
+  document.getElementsByTagName("body")[0].removeChild(document.getElementById("modalContainer"));
+}
+
+function ful() {
+  alert('Alert this pages');
+}
+    </script>
+    <!-- .......... -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js" integrity="sha256-4sETKhh3aSyi6NRiA+qunPaTawqSMDQca/xLWu27Hg4=" crossorigin="anonymous"
     ></script>
     <script src="js/jquery.min.js"></script>
